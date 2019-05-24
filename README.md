@@ -1,4 +1,4 @@
-# vue-demo-without-typescript
+# vue-demo-with-ArcGIS
 
 ## Project setup
 ```
@@ -24,6 +24,4 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+这是用vue/cli和ArcGIS做的地图
