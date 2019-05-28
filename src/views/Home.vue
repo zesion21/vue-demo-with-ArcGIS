@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" src="../assets/logo.png" @click="jupm()">
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
 
@@ -12,7 +12,13 @@ import HelloWorld from "@/components/HelloWorld.vue";
 export default {
   name: "home",
   components: {
-    HelloWorld
+    // HelloWorld
+  },
+  methods: {
+    jupm() {
+      // console.log("6");
+      this.$router.push({ path: "login" });
+    }
   }
 };
 </script>

@@ -5,12 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "npm run serve"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "esri-loader": "^2.9.2",
+    "iview": "^3.0.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
@@ -21,10 +23,12 @@
     "@vue/cli-service": "^3.7.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.8.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-iview": "^1.0.6",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
@@ -33,10 +37,19 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
+      "plugin:vue/essential"
     ],
-    "rules": {},
+    "rules": {
+      "no-var": "warn",
+      "no-extra-parens": 1,
+      "no-multi-spaces": 1,
+      "max-len": [0, 100, 4],
+      "no-redeclare": 1,
+      "curly": [1, "all"],
+      "no-use-before-define": 2,
+      "camelcase": 2,
+      "semi": [1, "always"]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
